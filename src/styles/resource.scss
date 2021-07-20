@@ -1,0 +1,32 @@
+$dark_font:RGB(206,206,206);
+.resource{
+    width: 70vw;
+    min-height: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+    border: 1px solid gray;
+    h4 a {
+        text-decoration: none;
+        color: $dark_font;
+        font-size: 1.8rem;
+        cursor: pointer;
+        font-weight: 500;
+        &:hover{
+            color: lightslategray;
+        }
+    }
+    
+}
+
+
+@media all and (max-width:800px){
+    .resource{
+        width: 90vw;
+        h4 a {
+            font-size: 1.3rem !important;
+        }
+    }
+}

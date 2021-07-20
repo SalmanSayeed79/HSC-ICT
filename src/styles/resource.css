@@ -1,0 +1,41 @@
+.resource {
+  width: 70vw;
+  min-height: 8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem 0;
+  border: 1px solid gray;
+}
+
+.resource h4 a {
+  text-decoration: none;
+  color: RGB(206, 206, 206);
+  font-size: 1.8rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.resource h4 a:hover {
+  color: lightslategray;
+}
+
+@media all and (max-width: 800px) {
+  .resource {
+    width: 90vw;
+  }
+  .resource h4 a {
+    font-size: 1.3rem !important;
+  }
+}
+/*# sourceMappingURL=resource.css.map */

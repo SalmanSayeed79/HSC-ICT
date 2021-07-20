@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useEffect,useState} from 'react';
+import Home from './pages/Home'
+import Login from './pages/Login'
+import {auth } from './firebase'
 
-function App() {
+export default function App() {
+  const [loggedIn,setLoggedIn]=useState(true)
+  const [loading,setLoading]=useState(true)
+  const authChecker=()=>{
+    auth.onAuthStateChanged((user)=>{
+    setLoading(true)
+    if(user){
+      setLoading(false)
+      setLoggedIn(true)
+      
+        }
+    else{
+      setLoading(false)
+      setLoggedIn(false)
+    }
+    })
+  }
+  useEffect(()=>{
+    authChecker()
+},[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {loading && <p style={{fontSize:"2rem",display:"flex",width:"100vw",height:"100vh",alignItems:"center",justifyContent:"center"}}>Loading.....</p>}
+      {!loading && !loggedIn && <Login/>}
+      {!loading && loggedIn && <Home/>}
     </div>
-  );
+  )
 }
 
-export default App;

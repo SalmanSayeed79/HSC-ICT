@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400;700&display=swap');
+*{
+    font-family: 'Roboto Slab', serif;
+    font-size:12px ;
+    margin: 0;
+    border: 0;
+}
+$dark_pri:#121212;
+$dark_sec:#2a2a2a;
+$dark_font:rgb(206, 206, 206);
+.body{
+    width: 100vw;
+    min-height: 100vh;
+    //background-color: lightblue;
+    overflow-x: hidden;
+    .header{
+        //position: fixed;
+        overflow-x: hidden;
+        bottom: 90vh;
+        right: 0;
+        width: 100vw;
+        height: 9vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $dark_sec;
+        color: $dark_font;
+        h2 a{
+            text-decoration: none;
+            cursor: pointer;
+            color: $dark_font;
+            font-size: 3rem;
+            margin-left: 5vw;
+        }
+        ul{
+            list-style: none;
+            width: 30vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            li a{
+                font-size: 1.5rem;
+                text-decoration: none;
+                cursor: pointer;
+                color: $dark_font;
+                &:hover{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    .home{
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 93vh;
+        //margin-top: 8vh;
+        //background-color: $dark_pri;
+        background-image: url('../assets/images/bg.png');
+        background-position: center;
+        background-size: cover;
+        color: $dark_font;
+        h2{
+            font-size: 4rem;
+            
+            padding: .5rem 1rem;
+            border-radius: 1rem;
+            transition: all .5s ease;
+            &:hover{
+                transform: translateY(-1vh);
+                background-color: #121212;
+                padding: .5rem 3rem;
+                cursor: pointer;
+            }
+        }
+        p{
+            font-size: 2rem;
+            transition: all .5s ease;
+            &:hover{
+                transform: translateY(1vh);
+                cursor: pointer;
+            }
+        }
+        .home_body{
+            overflow-x: hidden;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+    }
+    .videos{
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        min-height: 100vh;
+        background-color: $dark_sec;
+        color: $dark_font;
+        h2{
+            margin-top: 5vh;
+            font-size: 4rem;
+        }
+        p{
+            font-size: 2rem;
+        }
+        .week_container{
+            width: 70vw;
+            min-height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid gray;
+            margin: 1rem 0;
+            h4{
+                font-size: 1.5rem;
+                margin-left: 2vw;
+            }
+        }
+    }
+    .resources{
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        min-height: 100vh;
+        background-color: $dark_pri;
+        color: $dark_font;
+        h2{
+            font-size: 4rem;
+        }
+        p{
+            font-size: 2rem;
+        }
+    }
+    .footer{
+        width: 100vw;
+        height: 10vh;
+        background-color: $dark_sec;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p{
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media all and (max-width:800px){
+    .body{
+        .header{
+            h2 a{
+                font-size: 2rem;
+            }
+            ul{
+                display: none;
+            }
+        }
+        .home{
+            h2{
+                font-size: 1.8rem;
+                
+            }p{
+                font-size: 1.5rem;
+            }
+            .home_body{
+                img{
+                    width: 110vw;
+                }
+            }
+        }
+        .videos{
+            h2{
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1.5rem;
+            }
+            .week_container{
+                width: 90vw;
+            }
+        }
+        .resources{
+            h2{
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1.5rem;
+            }
+            .week_container{
+                width: 90vw;
+            }
+        }
+        .footer{
+            p{
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
